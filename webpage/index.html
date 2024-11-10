@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Scraper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Web Scraper</h1>
+        <form id="scrape-form">
+            <label for="url">Website URL:</label>
+            <input type="text" id="url" name="url" required>
+
+            <label for="selectors">CSS Selectors (comma-separated):</label>
+            <input type="text" id="selectors" name="selectors" placeholder="h1, p, a">
+
+            <label for="output-format">Output Format:</label>
+            <select id="output-format" name="output-format">
+                <option value="csv">CSV</option>
+                <option value="json">JSON</option>
+                <option value="text">Plain Text</option>
+            </select>
+
+            <button type="submit">Scrape</button>
+        </form>
+
+        <div id="results">
+            <h2>Scraped Data</h2>
+            <pre id="data-output"></pre>
+            <a id="download-link" href="#" download="scraped_data.csv">Download CSV</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
